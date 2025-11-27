@@ -1,0 +1,8 @@
+Flask
+flask-cors
+requests
+python-dotenv
+pymongo
+dnspython
+certifi
+gunicorn
