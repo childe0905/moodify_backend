@@ -58,7 +58,7 @@ def get_spotify_token():
     if time.time() < spotify_token_cache["expires_at"]:
         return spotify_token_cache["access_token"]
 
-    TOKEN_URL = "https://accounts.spotify.com/api/token"
+    url = "https://accounts.spotify.com/api/token"
     payload = {"grant_type": "client_credentials"}
     try:
         resp = requests.post(url, data=payload, auth=(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET))
